@@ -31,11 +31,11 @@ While the library abstracts topics away, they follow a standardized format compa
 
 ## Installation
 
-This library requires the **ArduinoMqttClient** library. You can install it via the Arduino Library Manager.
+This library requires the **ArduinoMqttClient** library. You can install it via the Arduino Library Manager. If MiniMessenger is installed through the Arduino library manager, the external library should be installed automatically.
 
 ## Bare Minimum Code
 
-To use the library, you need to provide your network credentials and broker details. It is recommended to use a `secrets.h` file. You can find an example under `./config/secrets.example.h.` The code below will receive messages from any source and print them out, and will send `Hello World` to the Group (All).
+To use the library, you need to provide your network credentials and broker details. It is recommended to use a `secrets.h` file. You can find an example under `./config/secrets.example.h.` The code below will receive messages from any source (If directed to the board) and print them out, and will send `Hello World` to the Group (All).
 
 ```cpp
 #include <MiniMessenger.h>
@@ -122,7 +122,7 @@ Every message includes these identifiers to ensure the server routes data correc
 
 ### A. Robot to Server (Uplink)
 
-These message can change before the challenge finals (unlikely), please refer to the table below to keep your functions up-to-date. Any changes will be communicated through Moodle as well.
+These messages can change before the challenge finals (unlikely), please refer to the table below to keep your functions up-to-date. Any changes will be communicated through Moodle as well.
 
 | Type | Example Payload | Description |
 | :--- | :--- | :--- |
